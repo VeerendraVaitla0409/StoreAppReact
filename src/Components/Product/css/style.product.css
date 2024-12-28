@@ -1,0 +1,59 @@
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.navSearch {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.add-cart {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.productImgDiv {
+    height: 380px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.productImg {
+    height: 150px;
+    object-fit: contain;
+}
+
+.card-title {
+    font-size: 1.1rem;
+}
+
+.more-desc {
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+}
+
+.product-rating {
+    font-size: 1rem;
+}
+
+.product-count {
+    font-size: 0.875rem;
+}
+
+.product-price {
+    font-size: 1.1rem;
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    vertical-align: middle;
+}
