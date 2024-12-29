@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import cart from '../Components/Product/assets/cart.png'
+import logo from '../Components/Product/assets/logo.png'
 
 const Header = ({ cartCount }) => {
 
@@ -10,7 +11,13 @@ const Header = ({ cartCount }) => {
         <div>
             <nav className="navbar navbar-expand-sm navbar-light bg-dark">
                 <div className="container">
-                    <NavLink className="navbar-brand" to="/"><h5 className='text-white fw-bold'>Buy<span className='text-danger fw-bold'>Sphere</span></h5></NavLink>
+                    <NavLink className="navbar-brand" to="/">
+                        <div className="logo-container">
+                            <img src={logo} className="logo" alt="logo" />
+                            <h5 className="text-white fw-bold brand-text">
+                                Buy<span className="text-danger fw-bold">Sphere</span>
+                            </h5>
+                        </div></NavLink>
                     <button className="navbar-toggler d-lg-none" type="button"
                         data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
                         aria-controls="collapsibleNavId" aria-expanded="false"
