@@ -100,7 +100,7 @@ const Products = ({ handleAddToCart }) => {
                                     </span>
                                 </div>
                                 <div className="d-flex justify-content-between align-items-center  mt-auto">
-                                    <h5 className="text-danger product-price">${product.price}</h5>
+                                    <h5 className="text-danger product-price">₹{product.price * 83}</h5>
                                     <button className="btn btn-danger px-4 py-2 w-auto add-cart" onClick={handleAddToCart}>
                                         <span className='text-white fw-bold'> Add to Cart</span>
                                     </button>
