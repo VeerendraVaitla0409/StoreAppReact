@@ -1,10 +1,10 @@
 import axios from "axios";
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
-import '../Product/css/style.product.css';
+import '../Product/css/style.product.css'
 import { ENDPOINTS } from "../constants/urls";
 
-export default class Products extends Component {
+export default class Lifestyle extends Component {
     constructor() {
         super();
         this.state = {
@@ -29,6 +29,7 @@ export default class Products extends Component {
 
     };
 
+    // Handle search term change
     handleSearchChange = (event) => {
         this.setState({
             searchTerm: event.target.value,
@@ -75,11 +76,12 @@ export default class Products extends Component {
     };
 
     componentDidMount() {
-        axios.get(ENDPOINTS.PAGE1_URL)
+        axios.get(ENDPOINTS.PAGE2_URL)
             .then((response) => {
+                console.log(response.data.products)
                 this.setState({
-                    productList: response.data,
-                    filteredProducts: response.data,
+                    productList: response.data.products,
+                    filteredProducts: response.data.products,
                     isLoading: false
                 });
             })
@@ -112,16 +114,16 @@ export default class Products extends Component {
                                 <NavLink className="nav-link fw-semibold" to="#" onClick={() => this.onCategoryChange('all')}>All</NavLink>
                             </li>
                             <li className="nav-item me-3">
-                                <NavLink className="nav-link fw-semibold" to="#" onClick={() => this.onCategoryChange("men's clothing")}>Men's Clothing</NavLink>
+                                <NavLink className="nav-link fw-semibold" to="#" onClick={() => this.onCategoryChange("beauty")}>Beauty</NavLink>
                             </li>
                             <li className="nav-item me-3">
-                                <NavLink className="nav-link fw-semibold" to="#" onClick={() => this.onCategoryChange('jewelery')}>Jewelery</NavLink>
+                                <NavLink className="nav-link fw-semibold" to="#" onClick={() => this.onCategoryChange('fragrances')}>Fragrances</NavLink>
                             </li>
                             <li className="nav-item me-3">
-                                <NavLink className="nav-link fw-semibold" to="#" onClick={() => this.onCategoryChange('electronics')}>Electronics</NavLink>
+                                <NavLink className="nav-link fw-semibold" to="#" onClick={() => this.onCategoryChange('furniture')}>Furniture</NavLink>
                             </li>
                             <li className="nav-item me-3">
-                                <NavLink className="nav-link fw-semibold" to="#" onClick={() => this.onCategoryChange("women's clothing")}>Women's Clothing</NavLink>
+                                <NavLink className="nav-link fw-semibold" to="#" onClick={() => this.onCategoryChange("groceries")}>Groceries</NavLink>
                             </li>
                         </ul>
 
@@ -144,7 +146,7 @@ export default class Products extends Component {
                         <div className="col-md-4 mb-4" key={product.id}>
                             <div className="card shadow-lg border-light rounded-lg productImgDiv">
                                 <img
-                                    src={product.image}
+                                    src={product.images[0]}
                                     className="card-img-top img-fluid rounded-top productImg"
                                     alt={product.title}
                                 />
@@ -161,10 +163,7 @@ export default class Products extends Component {
 
                                     <div className="d-flex align-items-center">
                                         <span className="text-warning product-rating">
-                                            {this.renderStars(product.rating.rate)}
-                                        </span>
-                                        <span className="ms-2 product-count">
-                                            ({product.rating.count} reviews)
+                                            {this.renderStars(product.rating)}
                                         </span>
                                     </div>
                                     <div className="d-flex justify-content-between align-items-center mt-auto">

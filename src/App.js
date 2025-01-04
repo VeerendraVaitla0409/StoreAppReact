@@ -11,18 +11,18 @@ import { useState } from 'react';
 
 function App() {
 
-   // State to hold cart count
-   const [cartCount, setCartCount] = useState(0);
+  // State to hold cart count
+  const [cartCount, setCartCount] = useState(0);
 
-   // Function to handle adding to the cart
-   const handleAddToCart = () => {
-     setCartCount(prevCount => prevCount + 1);
-   };
+  // Function to handle adding to the cart
+  const handleAddToCart = () => {
+    setCartCount(prevCount => prevCount + 1);
+  };
 
   return (
     <div className="App">
       <Header cartCount={cartCount} />
-      <Routing handleAddToCart={handleAddToCart} />
+      {<Routing handleAddToCart={handleAddToCart} />}
       <Footer />
     </div>
   );

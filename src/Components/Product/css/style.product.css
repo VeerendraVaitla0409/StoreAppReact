@@ -16,6 +16,16 @@
     letter-spacing: 0.5px;
 }
 
+.team-member{
+    width: 150px;
+    height: 150px;
+}
+
+form p {
+    padding: 0px 10px;
+    color: red;
+}
+
 .productImgDiv {
     height: 380px;
     overflow: hidden;

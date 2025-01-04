@@ -26,10 +26,13 @@ const Header = ({ cartCount }) => {
                                 </NavLink >
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="#"><span className='text-danger fw-bold'>About</span></NavLink>
+                                <NavLink className="nav-link" to="/lifestyle"><span className='text-danger fw-bold'>LifeStyle</span></NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" to="#"><span className='text-white fw-bold'>Contact</span></NavLink >
+                                <NavLink className="nav-link" to="/about"><span className='text-white fw-bold'>About</span></NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link" to="/contact"><span className='text-danger fw-bold'>Contact</span></NavLink >
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="#"><img src={cart} alt='cart icon' className="cart-icon" />
