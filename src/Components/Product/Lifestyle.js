@@ -148,6 +148,7 @@ export default class Lifestyle extends Component {
                                 <img
                                     src={product.images[0]}
                                     className="card-img-top img-fluid rounded-top productImg"
+                                    loading="lazy"
                                     alt={product.title}
                                 />
                                 <div className="card-body d-flex flex-column justify-content-between">

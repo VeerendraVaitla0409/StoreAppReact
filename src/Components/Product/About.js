@@ -27,7 +27,7 @@ export default class About extends Component {
                                 </p>
                             </div>
                             <div className="col-md-6 text-center">
-                                <img src={aboutImg} className='w-50 mx-auto rounded aboutImg' alt='Our Journey' />
+                                <img src={aboutImg} class="w-50 rounded aboutImg ml-4" alt="About Us" />
                             </div>
                         </div>
                     </div>

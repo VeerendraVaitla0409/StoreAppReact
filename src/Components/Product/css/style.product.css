@@ -67,3 +67,9 @@ form p {
     object-fit: contain;
     vertical-align: middle;
 }
+
+.aboutImg{
+    animation-name: heartBeat;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
